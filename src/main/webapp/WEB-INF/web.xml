@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file> <!-- This is fine if home.jsp is your default page -->
+    </welcome-file-list>
+
+    <!-- PostServlet definition -->
+    <servlet>
+        <servlet-name>PostServlet</servlet-name>
+        <servlet-class>PostServlet</servlet-class>
+    </servlet>
+
+    <!-- Other servlets -->
+    <servlet>
+        <servlet-name>posts</servlet-name>
+        <servlet-class>posts</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>postformServlet</servlet-name>
+        <servlet-class>postformServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <servlet-class>UserProfileServlet</servlet-class>
+    </servlet>
+
+    <!-- Mapping for PostServlet -->
+    <servlet-mapping>
+        <servlet-name>PostServlet</servlet-name>
+        <url-pattern>/PostServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Other servlet mappings -->
+    <servlet-mapping>
+        <servlet-name>posts</servlet-name>
+        <url-pattern>/posts</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>postformServlet</servlet-name>
+        <url-pattern>/postformServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UserProfileServlet</servlet-name>
+        <url-pattern>/UserProfileServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Session configuration -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+</web-app>
